@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QR image</title>
+        <link rel="stylesheet" href="styles/index.css" />
+    </head>
+    <body>
+        <div id="container">
+            <h1>QR-images</h1>
+            <form action="/" method="post" id="inputs">
+                <input id="url" name="url" type="text" required />
+                <button id="submit"><img src="icons/paperclip.svg" /></button>
+            </form>
+            <% if(locals.imagePath){ %>
+                <img id="imageQR" src="<%= imagePath %>" />
+            <% }else{ %>
+            <img id="imageQR" src="" />
+            <% } %>
+        </div>
+
+        <script src="script/jquery.min.js"></script>
+        <script src="script/graghic.js"></script>
+    </body>
+</html>

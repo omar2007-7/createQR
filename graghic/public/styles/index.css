@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+   
 }
 
 
@@ -14,6 +15,8 @@ body{
     height: 100vh;
 }
 #container{
+    transition: 1s all ;
+    height: max-content;
     display: flex;
     flex-direction: column;
     
@@ -24,6 +27,19 @@ body{
     box-shadow: 2px 2px 2px 2px rgba(73, 70, 70, 0.8);
     border-radius: 1rem;
 }   
+.open{
+    animation: 1s open forwards;
+}
+
+@keyframes open {
+    from{
+        height: 10rem;
+    }
+    to{
+        height: 21rem;
+    }
+}
+
 #inputs{
     display: flex;
     gap: 1rem;
@@ -50,3 +66,5 @@ body{
     
     transform: scale(1.1);
 }
+
+
