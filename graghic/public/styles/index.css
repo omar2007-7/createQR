@@ -19,15 +19,15 @@ body {
     display: flex;
     flex-direction: column;
 
-    width: 20rem;
-    height: 25rem;
+    width: 25rem;
+    height: 29rem;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     padding: 2rem;
     box-shadow: 0px 0px 1px 1px rgba(73, 70, 70, 0.8);
     border-radius: 1rem;
     position: relative;
-    background-color: aliceblue;
+    background-color: rgb(236, 238, 240);
 }
 @property --angle{
     syntax: "<angle>";
@@ -39,19 +39,19 @@ body {
     position: absolute;
     height:100%;
     width: 100%;
-    background-image: conic-gradient( from var(--angle),transparent 50%,#d85a28);
+    background-image: conic-gradient( from var(--angle),transparent 10%,#d85a28);
     top: 50%;
     left: 50%;
     translate:-50% -50% ;
     z-index: -1;
-    padding: 3px;
+    padding: 2px;
     border-radius: 1rem;
     animation: 3s spin linear infinite;
 
 }
 
 #container::before{
-    filter: blur(1.5rem);
+    filter: blur(0.2rem);
     opacity: 0.5;
 }
 
@@ -68,7 +68,7 @@ body {
     justify-content: space-between;
     gap: 0.5rem;
     height: 2rem;
-    width: 20rem;
+    width: 24rem;
     border-radius: 0;
     box-shadow: 0px 0px 4px 1px rgba(214, 213, 213, 0.8);
       background-color: rgb(228, 240, 250);
@@ -76,7 +76,7 @@ body {
 #url {
     outline: none;
     height: 2rem;
-    width: 17rem;
+    width: 20rem;
     border-radius: 0rem 0rem 1rem 0rem;
     border: 0;
     box-shadow: 0px 0px 3px 1px rgba(214, 213, 213, 0.8);
@@ -115,8 +115,10 @@ h1 {
     font-size: large;
     font-weight: bold;
     font-family: "Courier New", Courier, monospace;
+    text-align: center;
     justify-self: end;
 }
+    
 #imageQR {
     transition: 1s all;
     height: 10rem;
@@ -135,7 +137,7 @@ h1 {
     }
 
     #inputs {
-        width: 15rem;
+        width: 14rem;
     }
     #url {
         width: 13rem;
@@ -146,5 +148,9 @@ h1 {
     h1 {
         margin-bottom: 1rem;
         font-size: 1.4rem;
+    }
+    #web{
+        font-size: small;
+        width: 12rem;
     }
 }

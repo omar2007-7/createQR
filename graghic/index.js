@@ -19,7 +19,7 @@ app.post("/", (req, res) => {
     qr_png.pipe(fs.createWriteStream(path));
     setTimeout(() => {
         res.render("home.ejs",{imagePath : "images/image.png",url:url})
-    }, 1000);
+    }, 500);
 });
 
 app.listen(port, () => {
