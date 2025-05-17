@@ -7,19 +7,28 @@
         <link rel="stylesheet" href="styles/index.css" />
     </head>
     <body>
-        <div id="container">
+        <div id="container" >
             <h1>QR-images</h1>
             <form action="/" method="post" id="inputs">
-                <input id="url" name="url" type="text" required />
-                <button id="submit"><img src="icons/paperclip.svg" /></button>
+                <input
+                    id="url"
+                    name="url"
+                    type="text"
+                    required
+                    placeholder="url..."
+                />
+                <button id="submit"><img src="icons/inter.svg" /></button>
+                <!-- <button id="submit"><img src="icons/paperclip.svg" /></button> -->
             </form>
             <% if(locals.imagePath){ %>
-                <img id="imageQR" src="<%= imagePath %>" />
-            <% }else{ %>
-            <img id="imageQR" src="" />
+            <img class="img" id="imageQR" src="<%= imagePath %>" />
+            <h2 id="web" ><%= url %></h2>
+            <% }else { %>
+            <img class="img" id="imageQR" src="icons/homei.svg" />
+            <h2 id="web"></h2>
+
             <% } %>
         </div>
-
         <script src="script/jquery.min.js"></script>
         <script src="script/graghic.js"></script>
     </body>

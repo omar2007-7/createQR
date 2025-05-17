@@ -2,10 +2,7 @@ const container = $("#container");
 const urlInput = $("#url");
 const submit = $("#submit");
 const imagePlace = $("#imageQR");
+const image = $(".img");
+const url = $("#web");
 
-submit.on("click", function () {
-    if((imagePlace.attr("src") ==="") && (urlInput.val()!=="")){
 
-        container.addClass("open");
-    }
-});

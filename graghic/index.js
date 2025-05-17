@@ -18,7 +18,7 @@ app.post("/", (req, res) => {
     let qr_png = qr.image(url, { type: "png" });
     qr_png.pipe(fs.createWriteStream(path));
     setTimeout(() => {
-        res.render("home.ejs",{imagePath : "images/image.png"})
+        res.render("home.ejs",{imagePath : "images/image.png",url:url})
     }, 1000);
 });
 
